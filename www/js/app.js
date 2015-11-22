@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'starter.directives'])
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'starter.directives', 'ngCordova'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -69,36 +69,36 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       }
     })
 
-    .state('tab.map', {
-        url: '/map',
-        views:{
-            'tab-map':{
-                templateUrl: 'templates/tab-map.html',
-                controller: 'MapsCtrl'
-            }
-        }
-        })
+  .state('tab.map', {
+      url: '/map',
+      views:{
+          'tab-map':{
+              templateUrl: 'templates/tab-map.html',
+              controller: 'MapsCtrl'
+          }
+      }
+      })
 
 
-    .state('tab.login', {
-        url: '/login',
-        views:{
-            'tab-login':{
-                templateUrl: 'templates/tab-login.html',
-                controller: 'LoginCtrl'
-            }
-        }
-        })
+  .state('tab.login', {
+      url: '/login',
+      views:{
+          'tab-login':{
+              templateUrl: 'templates/tab-login.html',
+              controller: 'LoginCtrl'
+          }
+      }
+      })
 
-        .state('tab.camera', {
-            url: '/camera',
-            views:{
-                'tab-camera':{
-                    templateUrl: 'templates/tab-camera.html',
-                    controller: 'CameraCtrl'
-                }
-            }
-            })
+      .state('tab.camera', {
+          url: '/camera',
+          views:{
+              'tab-camera':{
+                  templateUrl: 'templates/tab-camera.html',
+                  controller: 'CameraCtrl'
+              }
+          }
+          })
 
 
   .state('tab.account', {

@@ -23,7 +23,8 @@ I close the issue as there is a workaround but will consider it reported for the
 
 Para agragar la camara:
 
-
+correr tabmien
+>bower install ngCordova
 > cordova plugin add org.apache.cordova.camera
 
 
@@ -62,4 +63,13 @@ exampleApp.controller("ExampleController", function($scope, $cordovaCamera) {
     }
 
 });
+```
+
+agregar el sigiente view
+```html
+<ion-content ng-controller="ExampleController">
+    <img ng-show="imgURI !== undefined" ng-src="{{imgURI}}">
+    <img ng-show="imgURI === undefined" ng-src="http://placehold.it/300x300">
+    <button class="button" ng-click="takePicture()">Take Picture</button>
+</ion-content>
 ```
