@@ -17,6 +17,12 @@ angular.module('starter.controllers', [])
   };
 })
 
+.controller("SignInCtrl", function($scope, $state) {
+    $scope.signIn = function(user){
+    console.log("Sign-in: ", user);
+    $state.go('tab.dash');
+  };
+})
 
 .controller("CameraCtrl", function($scope, $cordovaCamera) {
 
