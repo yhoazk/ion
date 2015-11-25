@@ -50,7 +50,6 @@ angular.module('starter.controllers', [])
 
 .controller('LoginCtrl', function($scope, $stateParams, Chats,$cordovaToast) {
   $scope.loginfnc = function () {
-    alert("masdadada");
     $cordovaToast
    .show('Here is a message', 'long', 'center')
    .then(function(success) {
