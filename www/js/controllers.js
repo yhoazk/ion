@@ -17,11 +17,18 @@ angular.module('starter.controllers', [])
   };
 })
 
+
+
 .controller("SignInCtrl", function($scope, $state) {
     $scope.signIn = function(user){
     console.log("Sign-in: ", user);
     $state.go('tab.dash');
   };
+
+    $scope.createAccount = function(user){
+      console.log("Create Account: ", user);
+      $state.go('tab.dash');
+    };
 })
 
 .controller("CameraCtrl", function($scope, $cordovaCamera) {
@@ -36,7 +43,7 @@ angular.module('starter.controllers', [])
             targetWidth: 300,
             targetHeight: 300,
             popoverOptions: CameraPopoverOptions,
-            saveToPhotoAlbum: false
+            saveToPhotoAlbum: true
         };
 
         $cordovaCamera.getPicture(options).then(function(imageData) {

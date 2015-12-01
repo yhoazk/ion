@@ -73,3 +73,17 @@ agregar el sigiente view
     <button class="button" ng-click="takePicture()">Take Picture</button>
 </ion-content>
 ```
+
+http://devdactic.com/how-to-capture-and-store-images-with-ionic/
+## ionic store local data
+
+correr el cmd en el root del prj
+```
+cordova plugin add cordova-plugin-file
+```
+
+Asegurarse que el script `ng-cordova.js` está en `index.html`
+y que se añade como dependencia en el app.js
+```javascript
+angular.module('starter', ['ionic', 'ngCordova'])
+```
