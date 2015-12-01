@@ -1,6 +1,15 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope) {})
+.controller('DashCtrl', function($scope) {
+  $scope.status = {
+      submitEnabled :true
+  };
+  $scope.submitReport = function ($scope, $state) {
+    console.log("submitEnabled <- true");
+    //$state.go('tab.dash');
+  }
+
+})
 
 .controller('ChatsCtrl', function($scope, Chats) {
   // With the new view caching in Ionic, Controllers are only called

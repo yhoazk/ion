@@ -1,11 +1,15 @@
 <ion-view ng-hide="settings.enableFriends" ng-class="{hide:false}" view-title="Dashboard">
   <ion-content class="padding">
     <div class="list card">
-      <div class="item item-divider">Create report</div>
+      <div class="item item-divider">Reportar Falla</div>
       <div ng-hide="settings.enableFriends" class="item item-body">
-        <div>
+       <ion-toggle  ng-model="status.submitReport">
+         Crear Nuevo Reporte
+       </ion-toggle>
+        <div ng-show="status.submitReport" >
           <form class="" action="index.html" method="post">
-            tipo de falla: <select name="tipoReporte">
+            Localidad: <input type="text" name="localidad" placeholder="Guadalajara">
+            Tipo de Falla: <select name="tipoReporte">
                 <option value="Alumbrado">Alumbrado</option>
                 <option value="Pavimento">Pavimento</option>
                 <option value="Jardines">Jardines</option>
@@ -13,13 +17,25 @@
                 <option value="Tortas">Tortas</option>
                 <option value="Tamales">Tamales</option>
               </select>
-            
+              <br>
+            Ubicación Geografica:
+            <br>
+            <input type="button" name="GPS" value="" ng-click="gotoGetLocation()">
+            <input type="button" name="PickPoint" value="" ng-click="gotoPickPoint()">
+            <input type="button" name="Descripcion" value="" ng-click="gotoDescription()">
+            <br>
+            <br>
+            <input type="text" name="name" value="" placeholder="Descripcion, cruces, calle y referencia">
+            <br>
+            Referencias / Comentario adicinal:
+            <input type="text" name="name" value="" placeholder="Referencias/Commentarios">
+            <input type="submit" name="name" value="Ingresar" ng-click="submitReport()">
           </form>
         </div>
       </div>
     </div>
     <div class="list card">
-      <div class="item item-divider">Health</div>
+      <div class="item item-divider">Listado de Fallas Reportadas</div>
       <div class="item item-body">
         <div>
           You ate an apple today!
@@ -27,7 +43,7 @@
       </div>
     </div>
     <div class="list card">
-      <div class="item item-divider">Upcoming</div>
+      <div class="item item-divider">Mi Peril</div>
       <div class="item item-body">
         <div>
           You have <b>29</b> meetings on your calendar tomorrow.
