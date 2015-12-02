@@ -51,10 +51,10 @@ angular.module('starter.controllers', [])
     console.log("Sign-in: ", user);
     $state.go('tab.dash');
   };
-
+  /* el $state no esta como dependencia de la funcion, per si del controlador*/
     $scope.createAccount = function(user){
       console.log("Create Account: ", user);
-      $state.go('tab.dash');
+      $state.go('tab.login');
     };
 })
 
