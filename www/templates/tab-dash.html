@@ -20,13 +20,20 @@
               <br>
             Ubicación Geografica:
             <br>
-            <input type="button" name="GPS" value="" ng-click="gotoGetLocation()">
-            <input type="button" name="PickPoint" value="" ng-click="gotoPickPoint()">
-            <input type="button" name="Descripcion" value="" ng-click="gotoDescription()">
+            <ul class="list">
+              <a href="#/tab/map" class="item">GPS</a>
+              <a href="#/tab/map" class="item">Punto en Mapa</a>
+              <a href="#/tab/camera" class="item">Descripción</a>
+            </ul>
+            <!--
+            <input type="button" name="GPS" value="GPS" ng-click="gotoGetLocation()">
+            <input type="button" name="PickPoint" value="Mapa" ng-click="gotoPickPoint()">
+            <input type="button" name="Descripcion" value="Descipción" ng-click="gotoDescription()">
+            -->
             <br>
             <br>
-            <textarea  name="description" rows="10" cols="15">
-              Descripción de la falla.
+            <textarea class="dark"  name="description" rows="10" cols="15">
+Descripción de la falla.
             </textarea>
             <br>
             Referencias / Comentario adicinal:
@@ -37,19 +44,23 @@
       </div>
     </div>
     <div class="list card">
-      <div class="item item-divider">Listado de Fallas Reportadas</div>
+      <!--div class="item item-divider">Mis Reportes </div-->
       <div class="item item-body">
         <div>
-          You ate an apple today!
+          <a ui-sref='tab.account'>Mi Perfil</a>
         </div>
       </div>
     </div>
     <div class="list card">
-      <div class="item item-divider">Mi Peril</div>
+      <!-- div class="item item-divider">Mi Peril</div-->
       <div class="item item-body">
         <div>
-          You have <b>29</b> meetings on your calendar tomorrow.
+          <!-- input type="button" name="gotoMyProfile" value="Mi Perfil" ng-click="gotoMyProfile()"-->
+          <a ui-sref='tab.chats'>Mis Reportes</a>
         </div>
+      </div>
+      <div class="item item-body">
+        <input type="button" name="closeSession" value="Cerrar Sesión" ng-click="closeSession()">
       </div>
     </div>
     <ion-side-menus>

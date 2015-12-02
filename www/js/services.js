@@ -16,14 +16,14 @@ angular.module('starter.services', [])
     face: 'img/max.png'
   }, {
     id: 2,
-    name: 'Adam Bradleyson',
-    lastText: 'I should buy a boat',
-    face: 'img/adam.jpg'
+    name: 'Reporte #ABCE',
+    lastText: 'Mi mama me mima mi mama',
+    face: 'img/map.png'
   }, {
     id: 3,
-    name: 'Mike Harrington',
-    lastText: 'Tacossss',
-    face: 'img/mike.png'
+    name: 'Reporte #231',
+    lastText: 'La sinceridad siempre nos llevará a odiarnos un poco',
+    face: 'img/adam.png'
   }];
 
   return {

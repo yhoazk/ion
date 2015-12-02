@@ -1,12 +1,17 @@
 <ion-view view-title="Camera">
-  <ion-content>
+  <ion-content class="padding" ng-controller="CameraCtrl">
 
+<div class="list card">
+  <div  class="item item-body">
 
-    <ion-content ng-controller="CameraCtrl">
         <img ng-show="imgURI !== undefined" ng-src="{{imgURI}}">
         <img ng-show="imgURI === undefined" ng-src="http://placehold.it/300x300">
         <button type="button_camera" ng-click="takePicture()">Take Picture</button>
-    </ion-content>
 
+</div>
+<textarea class="dark"  name="description" rows="10" cols="15">
+Descripción de la falla.
+</textarea>
+</div>
   </ion-content>
 </ion-view>

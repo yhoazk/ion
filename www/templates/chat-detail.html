@@ -6,9 +6,18 @@
 -->
 <ion-view view-title="{{chat.name}}">
   <ion-content class="padding">
-    <img ng-src="{{chat.face}}" style="width: 64px; height: 64px">
+    <img ng-src="{{chat.face}}" style="width: 128px; height: 128px">
     <p>
       {{chat.lastText}}
     </p>
+    <progress value="22" max="100"></progress>
+    <input type="radio" name="sent" value="">Enviado
+    <input type="radio" name="received  " value="">Recibido
+    <input type="radio" name="inProcess" value="">En Proceso
+
+    <textarea  name="comenntForGov" rows="10" cols="25">
+inserter comentario
+    </textarea>
+
   </ion-content>
 </ion-view>

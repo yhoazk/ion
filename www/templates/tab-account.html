@@ -1,25 +1,46 @@
-<ion-view view-title="Account">
+<ion-view view-title="Mi Perfil">
   <ion-content>
     <ion-list>
-    <ion-toggle  ng-model="settings.enableFriends">
-        Enable Friends {{settings.enableFriends}} ---
-    </ion-toggle>
+
+    <!--ion-toggle  ng-model="settings.enableFriends"-->
+        <div class="list card ">
+          <div class="item item-body">
+            <img ng-src="../img/mush.png" alt=""/>  Pepe Pecas Martinez
+          </div>
+
+        </div>
+         <!--/ion-toggle-->
 
     <div class="list card">
-      <div class="item item-divider">Recent Updates</div>
+      <div class="item item-divider">Datos Personales</div>
       <div ng-show="settings.enableFriends" class="item item-body">
         <div>
-          There is a fire in <b>sector 3</b> {{settings.enableFriends}} ::
+            <b>Av Siempre Viva 742, Zapopan </b>
         </div>
       </div>
     </div>
 
    <div class="list card">
-     <div class="item item-divider">Map</div>
-     <div ng-show="settings.enableFriends" class="item item-body">
+     <div class="item item-divider dark">Reporte #1</div>
+     <div ng-show ="settings.enableFriends" class="item item-body dark">
         <div>
+          Su reporte esta siendo procesado
         </div>
      </div>
+
+     <div ng-show="settings.enableFriends" class="item item-body dark">
+        <div>
+          Su proceso esta siendo reportado
+        </div>
+     </div>
+
+     <div ng-show="settings.enableFriends" class="item item-body dark ">
+        <div>
+          Esta siendo procesado por su reporte
+        </div>
+     </div>
+
+
    </div>
 
     </ion-list>

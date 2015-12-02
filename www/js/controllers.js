@@ -1,13 +1,31 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope) {
+.controller('DashCtrl', function($scope, $state) {
   $scope.status = {
       submitEnabled :true
   };
   $scope.submitReport = function ($scope, $state) {
     console.log("submitEnabled <- true");
     //$state.go('tab.dash');
-  }
+  };
+
+  $scope.gotoMyProfile = function($scope, $state) {
+    console.log("gotoMyProfile");
+    $state.go('tab.account');
+  };
+
+  $scope.gotoGetLocation = function ($scope, $state) {
+    console.log("gotoGetLocation");
+    $state.go('tab.dash');
+  };
+  $scope.gotoPickPoint = function ($scope, $state) {
+    console.log("gotoPickPoint");
+    //$state.go('tab.dash');
+  };
+  $scope.gotoDescription = function ($scope, $state) {
+    console.log("gotoDescription");
+      //$state.go('tab.dash');
+  };
 
 })
 
