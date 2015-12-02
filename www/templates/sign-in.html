@@ -1,10 +1,20 @@
-<ion-view view-title="Log in">
+<ion-view view-title="Iniciar Sesión">
   <ion-content scroll="false">
+    <div class="column_center">
+      <br>
+      Usuario
+      <br>
     <input type="emailInputType" name="email" placeholder="a@example.com/numero celular" value="" ng-model="user.username">
+    <br> Contraseña <br>
     <input type="password" name="password" placeholder="password" value="" ng-model="user.password">
+
     <input type="button" name="name"  value="Log in"  ng-click="signIn(user)" >
     <input type="button" name="sign_in_app" value="Crear Cuenta"  ng-click="createAccount()">
     <!--div id="map"></div-->
-
+  </div>
+    <br>
+    <input type="button" name="resetPasswd" value="¿olvidaste tu contraseña?">
+    <br>
+    <a href="http://example.com">AYUDA</a>
   </ion-content>
 </ion-view>
